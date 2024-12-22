@@ -1,0 +1,9 @@
+{
+    "qpr": {
+        "prefix": "qpr",
+        "body": [
+            "Q_PROPERTY(${1:Type} ${2:Name} READ get${1} WRITE set${1})"
+        ],
+        "description": "Code snippet for simple Q_PROPERTY"
+    }
+}

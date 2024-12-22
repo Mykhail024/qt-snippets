@@ -1,0 +1,26 @@
+{
+    "name": "qt-snippets",
+    "displayName": "Qt Snippets",
+    "publisher": "Mykhailo Muzyka",
+    "engines": { "vscode": "^1.11.0" },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "cpp",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "homepage": "https://github.com/Mykhail024/qt-snippets",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Mykhail024/qt-snippets"
+    },
+    "bugs": {
+		"url": "https://github.com/Mykhail024/qt-snippets/issues",
+		"email": "mykhailo.muzyka535@gmail.com"
+	}
+}
