@@ -2,7 +2,7 @@
     "qpr": {
         "prefix": "qpr",
         "body": [
-            "Q_PROPERTY(${1:Type} ${2:Name} READ get${1} WRITE set${1})"
+            "Q_PROPERTY(${1:Type} ${2:Name} READ get${2} WRITE set${2})"
         ],
         "description": "Code snippet for simple Q_PROPERTY"
     }
