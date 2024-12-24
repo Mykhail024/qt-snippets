@@ -5,5 +5,12 @@
             "Q_PROPERTY(${1:Type} ${2:Name} READ get${2} WRITE set${2})"
         ],
         "description": "Code snippet for simple Q_PROPERTY"
+    },
+    "qprn": {
+        "prefix": "qprn",
+        "body": [
+            "Q_PROPERTY(${1:Type} ${2:Name} READ get${2} WRITE set${2} NOTIFY ${2/capitalize}Changed)"
+        ],
+        "description": "Code snippet for simple Q_PROPERTY witch NOTIFY signal"
     }
 }
