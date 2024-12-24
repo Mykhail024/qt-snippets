@@ -19,5 +19,113 @@
             "Q_OBJECT"
         ],
         "description": "Code snippet for Q_OBJECT macro"
+    },
+    "qmlclass": {
+        "prefix": "qmlclass",
+        "body": [
+            "class ${1:MyClass} : public QObject {",
+            "\tQ_OBJECT",
+            "\tQML_ELEMENT",
+            "\tpublic:",
+            "\t\texplicit $1(QObject *parent = nullptr);",
+            "\t\t$2",
+            "",
+            "\tpublic slots:",
+            "\tsignals:",
+            "\tprivate:",
+            "\t\t$3",
+            "};",
+            ""
+        ],
+        "description": "Code snippet for empty Qt QML class"
+    },
+    "class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:MyClass} {",
+            "\tpublic:",
+            "\t\t$1();",
+            "\t\t$1($1 &&) = default;",
+            "\t\t$1(const $1 &) = default;",
+            "\t\t$1 &operator=($1 &&) = default;",
+            "\t\t$1 &operator=(const $1 &) = default;",
+            "\t\t~$1();",
+            "\t\t$2",
+            "",
+            "\tprivate:",
+            "\t\t$3",
+            "};",
+            "",
+            "$1::$1() {",
+            "}",
+            "",
+            "$1::~$1() {",
+            "}"
+        ],
+        "description": "Code snippet for class"
+    },
+    "eclass": {
+        "prefix": "eclass",
+        "body": [
+            "class ${1:MyClass} {",
+            "\tpublic:",
+            "\t\t$2",
+            "\tprivate:",
+            "\t\t$3",
+            "};",
+            ""
+        ],
+        "description": "Code snippet for empty class"
+    },
+    "qclass": {
+        "prefix": "qclass",
+        "body": [
+            "class ${1:MyClass} : public QObject {",
+            "\tQ_OBJECT",
+            "\tpublic:",
+            "\t\texplicit $1(QObject *parent = nullptr);",
+            "\t\t$2",
+            "",
+            "\tpublic slots:",
+            "\tsignals:",
+            "\tprivate:",
+            "\t\t$3",
+            "};",
+            ""
+        ],
+        "description": "Code snippet for empty Qt class"
+    },
+    "classi": {
+        "prefix": "classi",
+        "body": [
+            "class ${1:MyClass} {",
+            "\tpublic:",
+            "\t\t$1() = default;",
+            "\t\t$1($1 &&) = default;",
+            "\t\t$1(const $1 &) = default;",
+            "\t\t$1 &operator=($1 &&) = default;",
+            "\t\t$1 &operator=(const $1 &) = default;",
+            "\t\t~$1() = default;",
+            "\t\t$2",
+            "",
+            "private:",
+            "\t$3",
+            "};"
+        ],
+        "description": "Code snippet for class with inline constructor/destructor"
+    },
+    "connect": {
+        "prefix": "connect",
+        "body": [
+            "connect(${1:object}, &${2:signal}, ${3:r_object}, &${4:slot});"
+        ],
+        "description": "Code snippet for connect function, between signal and slot"
+    },
+    "connectt": {
+        "prefix": "connectt",
+        "body": [
+            "connect(this, &${2:signal}, &${4:slot});"
+        ],
+        "description": "Code snippet for connect function, between signal and slot within the same object"
     }
 }
